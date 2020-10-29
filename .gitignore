@@ -1,0 +1,7 @@
+# terraform environment
+.terraform
+terraform.tfstate*
+outplan
+
+# Distribution / packaging
+.DS_Store
