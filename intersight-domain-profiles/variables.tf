@@ -7,8 +7,10 @@ variable "api_endpoint" {
   default = "https://www.intersight.com"
 }
 
-# Server and Organization names
-variable "server_list" {
+# Switch and Organization names
+variable "domain_profile_name" {}
+
+variable "switch_list" {
   type = list
 }
 
@@ -16,15 +18,6 @@ variable "organization_name" {
   default = "default"
 }
 
-variable "server_profile_action" {
+variable "domain_profile_action" {
   default = "No-op"
 }
-
-# LAN variables
-variable "management_vlan" {}
-
-variable "client_vlan" {}
-
-variable "cluster_vlan" {}
-
-variable "replication_vlan" {}
