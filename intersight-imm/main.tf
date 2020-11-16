@@ -21,13 +21,15 @@ module "intersight-moids" {
 }
 
 # Server moids
+/* bug currently prevents retrieving IMM moids
 data "intersight_compute_physical_summary" "server_moid" {
   name  = var.server_list[count.index].name
   count = length(var.server_list)
 }
+*/
 
 # Server profiles
-resource "intersight_server_profile" "storage-node1" {
+resource "intersight_server_profile" "node1" {
   name = "SP-${var.server_list[count.index].name}"
   organization {
     object_type = "organization.Organization"
@@ -35,7 +37,7 @@ resource "intersight_server_profile" "storage-node1" {
   }
   target_platform = var.server_list[count.index].target_platform
   assigned_server {
-    moid        = data.intersight_compute_physical_summary.server_moid[count.index].moid
+    moid        = var.server_list[count.index].moid
     object_type = var.server_list[count.index].object_type
   }
   action = var.server_profile_action

@@ -3,5 +3,8 @@
 terraform.tfstate*
 outplan
 
+# default vars file
+terraform.tfvars
+
 # Distribution / packaging
 .DS_Store

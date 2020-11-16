@@ -23,8 +23,4 @@ variable "server_profile_action" {
 # LAN variables
 variable "management_vlan" {}
 
-variable "client_vlan" {}
-
 variable "cluster_vlan" {}
-
-variable "replication_vlan" {}
