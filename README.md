@@ -1,6 +1,6 @@
 # intersight-terraform-modules
 
-The Cisco Intersight Terraform provider is available in the Terraform Registry at https://registry.terraform.io/providers/CiscoDevNet/intersight/latest.  This repository contains example modules that use the provider.
+The Cisco Intersight Terraform provider is available in the Terraform Registry at https://registry.terraform.io/providers/CiscoDevNet/intersight/latest.  This repository contains example modules that use the provider.  Additional examples for HyperFlex based deployments are at https://github.com/sandkum5/terraform-intersight-hx-edge-deploy.
 
 ## Installation and Usage
 
