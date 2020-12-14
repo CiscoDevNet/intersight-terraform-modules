@@ -30,7 +30,12 @@ data "intersight_compute_physical_summary" "server_moid" {
 
 # Server profiles
 resource "intersight_server_profile" "node1" {
-  name = "SP-${var.server_list[count.index].name}"
+  name        = "SP-${var.server_list[count.index].name}"
+  description = "Updated Profile for server name ${var.server_list[count.index].name}"
+  tags {
+    key   = "Site"
+    value = "SJC02"
+  }
   organization {
     object_type = "organization.Organization"
     moid        = module.intersight-moids.organization_moid
