@@ -20,7 +20,18 @@ variable "server_profile_action" {
   default = "No-op"
 }
 
-# LAN variables
-variable "management_vlan" {}
+# IMC access variables
+variable "imc_access_vlan" {}
 
+variable "ip_pool" {}
+
+variable "imc_access_policy" {}
+
+variable "local_user_policy" {}
+
+variable "local_username" {}
+
+variable "local_username_password" {}
+
+# vNIC variables
 variable "cluster_vlan" {}

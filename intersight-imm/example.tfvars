@@ -12,15 +12,36 @@ server_list = [
     object_type     = "compute.Blade",
     target_platform = "FIAttached",
     moid            = "5fa5b8726176752d37b73331"
+    vmedia_policy   = "tf-kubam-248-19"
+    boot_iso        = "redhat7.5-boot.iso"
+    boot_img        = "imm-rhel-172-22-248-19.img"
   },
   {
     name            = "SJC07-R14-FI-1-1-2",
     object_type     = "compute.Blade",
     target_platform = "FIAttached",
     moid            = "5fa5b86f6176752d37b730fd"
+    vmedia_policy   = "tf-kubam-248-22"
+    boot_iso        = "redhat7.5-boot.iso"
+    boot_img        = "imm-rhel-172-22-248-22.img"
   },
+  {
+    name            = "SJC07-R14-FI-1-1-3",
+    object_type     = "compute.Blade",
+    target_platform = "FIAttached",
+    moid            = "5fa5b8706176752d37b73151"
+    vmedia_policy   = "tf-kubam-248-23"
+    boot_iso        = "redhat7.5-boot.iso"
+    boot_img        = "imm-rhel-172-22-248-23.img"
+  }
 ]
 
-management_vlan = 224
+imc_access_vlan = 248
 
-cluster_vlan = 224
+ip_pool = "SJC07-R14-15-IP"
+
+imc_access_policy = "tf-SJC07-R14-15-access"
+
+local_user_policy = "tf-guest-admin"
+
+cluster_vlan = 248
