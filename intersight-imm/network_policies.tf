@@ -31,7 +31,7 @@ resource "intersight_vnic_eth_adapter_policy" "imm-ethernet-adapter-policy" {
 }
 
 resource "intersight_fabric_eth_network_group_policy" "imm-sjc07-248-net-group" {
-  name        = "imm-sjc07-248-net-group"
+  name        = "imm-sjc07-248-net-group2"
   description = "Cluster Network for SJC07 248 IMM"
   organization {
     object_type = "organization.Organization"
