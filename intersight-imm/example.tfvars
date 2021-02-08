@@ -11,28 +11,22 @@ server_list = [
     name            = "SJC07-R14-FI-1-1-1",
     object_type     = "compute.Blade",
     target_platform = "FIAttached",
-    moid            = "5fa5b8726176752d37b73331"
-    vmedia_policy   = "tf-kubam-248-19"
-    boot_iso        = "redhat7.5-boot.iso"
-    boot_img        = "imm-rhel-172-22-248-19.img"
+    vmedia_policy   = "tf-esxi67u3-248-240"
+    boot_iso        = "esxi67u3-172-22-248-240.iso"
   },
   {
     name            = "SJC07-R14-FI-1-1-2",
     object_type     = "compute.Blade",
     target_platform = "FIAttached",
-    moid            = "5fa5b86f6176752d37b730fd"
-    vmedia_policy   = "tf-kubam-248-22"
-    boot_iso        = "redhat7.5-boot.iso"
-    boot_img        = "imm-rhel-172-22-248-22.img"
+    vmedia_policy   = "tf-esxi67u3-248-241"
+    boot_iso        = "esxi67u3-172-22-248-241.iso"
   },
   {
     name            = "SJC07-R14-FI-1-1-3",
     object_type     = "compute.Blade",
     target_platform = "FIAttached",
-    moid            = "5fa5b8706176752d37b73151"
-    vmedia_policy   = "tf-kubam-248-23"
-    boot_iso        = "redhat7.5-boot.iso"
-    boot_img        = "imm-rhel-172-22-248-23.img"
+    vmedia_policy   = "tf-esxi67u3-248-242"
+    boot_iso        = "esxi67u3-172-22-248-242.iso"
   }
 ]
 

@@ -20,6 +20,9 @@ resource "intersight_boot_precision_policy" "imm-boot-policy" {
     enabled     = true
     name        = "vmedia"
     object_type = "boot.VirtualMedia"
+    additional_properties = jsonencode({
+      SubType = "kvm-mapped-dvd"
+    })
   }
 
   dynamic "profiles" {
@@ -31,6 +34,7 @@ resource "intersight_boot_precision_policy" "imm-boot-policy" {
   }
 }
 
+/*
 resource "intersight_vmedia_policy" "imm-kubam" {
   name    = var.server_list[count.index].vmedia_policy
   enabled = true
@@ -64,3 +68,4 @@ resource "intersight_vmedia_policy" "imm-kubam" {
 
   count = length(var.server_list)
 }
+*/

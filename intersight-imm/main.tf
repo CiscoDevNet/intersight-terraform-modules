@@ -3,15 +3,15 @@ terraform {
   required_providers {
     intersight = {
       source  = "ciscodevnet/intersight"
-      version = ">= 0.1.0"
+      version = ">= 1.0.0"
     }
   }
 }
 
 provider "intersight" {
-  apikey        = var.api_key_id
-  secretkeyfile = var.api_private_key
-  endpoint      = var.api_endpoint
+  apikey    = var.api_key_id
+  secretkey = var.api_private_key
+  endpoint  = var.api_endpoint
 }
 
 # Organization and other required Managed Object IDs (moids)
@@ -21,12 +21,10 @@ module "intersight-moids" {
 }
 
 # Server moids
-/* bug currently prevents retrieving IMM moids
 data "intersight_compute_physical_summary" "server_moid" {
   name  = var.server_list[count.index].name
   count = length(var.server_list)
 }
-*/
 
 # Server profiles
 resource "intersight_server_profile" "node1" {
@@ -42,7 +40,7 @@ resource "intersight_server_profile" "node1" {
   }
   target_platform = var.server_list[count.index].target_platform
   assigned_server {
-    moid        = var.server_list[count.index].moid
+    moid        = data.intersight_compute_physical_summary.server_moid[count.index].moid
     object_type = var.server_list[count.index].object_type
   }
   action = var.server_profile_action
