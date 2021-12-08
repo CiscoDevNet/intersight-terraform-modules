@@ -2,8 +2,10 @@
 # Example .tfvars file
 # Can be copied to terraform.tfvars and edited so that Terraform will automatically use variables from this file.
 #
-api_private_key = "/Users/dsoper/Downloads/TME-Demodsoper-devSecretKey.txt"
-api_key_id      = "596cc79e5d91b400010d15ad/5db71f977564612d30cc3860/5db87ad67564612d301f743d"
+api_key_id = "5fdcc5627564612d33b78e10/6021b2b47564612d33df625a/6025d3c37564612d330677ec"
+api_private_key = "/Users/prathjan/Downloads/SecretKey.txt"
+endpoint = "https://intersight.com"
+
 
 # Server names and platform
 server_list = [

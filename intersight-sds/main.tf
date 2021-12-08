@@ -2,15 +2,15 @@
 terraform {
   required_providers {
     intersight = {
-      source  = "ciscodevnet/intersight"
-      version = ">= 0.1.0"
+      source = "CiscoDevNet/intersight"
+      version = "1.0.0"
     }
   }
 }
 
 provider "intersight" {
   apikey        = var.api_key_id
-  secretkeyfile = var.api_private_key
+  secretkey = var.api_private_key
   endpoint      = var.api_endpoint
 }
 
@@ -41,3 +41,8 @@ resource "intersight_server_profile" "storage-node1" {
   action = var.server_profile_action
   count  = length(var.server_list)
 }
+
+
+
+
+
